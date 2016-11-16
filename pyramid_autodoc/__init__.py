@@ -201,10 +201,11 @@ class RouteDirective(Directive):
 
             route_node.append(real_table)
 
-            if mapped_route['docs']:
-                route_node += rst2node(
-                    mapped_route['view'], mapped_route['docs']
-                )
+            # dont parse docs bc intersphinx
+            # if mapped_route['docs']:
+            #     route_node += rst2node(
+            #         mapped_route['view'], mapped_route['docs']
+            #     )
 
             custom_nodes.append(route_node)
 
